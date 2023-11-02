@@ -97,10 +97,7 @@ task.spawn(function()
 	end
 end)
 
-
-
-
-
+if Main then
 local dragging
 local dragInput
 local dragStart
@@ -124,7 +121,7 @@ Main.InputBegan:Connect(function(input)
 		end)
 	end
 end)
-
+end
 Main.InputChanged:Connect(function(input)
 	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 		dragInput = input
